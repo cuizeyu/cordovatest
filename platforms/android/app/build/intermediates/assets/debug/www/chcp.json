@@ -1,0 +1,8 @@
+{
+  "name": "testdemo",
+  "ios_identifier": "",
+  "android_identifier": "",
+  "update": "resume",
+  "content_url": "http://192.168.10.110:8080/",
+  "release": "2020.10.29-16.04.10"
+}

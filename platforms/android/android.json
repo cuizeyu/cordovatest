@@ -1,0 +1,162 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"HotCodePush\"><param name=\"android-package\" value=\"com.nordnetab.chcp.main.HotCodePushPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AppCenterShared\"><param name=\"onload\" value=\"true\" /><param name=\"android-package\" value=\"com.microsoft.azure.mobile.cordova.AppCenterSharedPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AppCenterAnalytics\"><param name=\"onload\" value=\"true\" /><param name=\"android-package\" value=\"com.microsoft.azure.mobile.cordova.AppCenterAnalyticsPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AppCenterCrashes\"><param name=\"onload\" value=\"true\" /><param name=\"android-package\" value=\"com.microsoft.azure.mobile.cordova.AppCenterCrashesPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AppCenterPush\"><param name=\"onload\" value=\"true\" /><param name=\"android-package\" value=\"com.microsoft.azure.mobile.cordova.AppCenterPushPlugin\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<preference name=\"loadUrlTimeoutValue\" value=\"60000\" />",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 4
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "app/src/main/AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<application android:fullBackupContent=\"@xml/appcenter_backup_rule\" />",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml",
+              "oldAttrib": {
+                "android:fullBackupContent": "@xml/appcenter_backup_rule",
+                "android:hardwareAccelerated": "true",
+                "android:icon": "@mipmap/icon",
+                "android:label": "@string/app_name",
+                "android:supportsRtl": "true"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-hot-code-push-plugin": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-appcenter-shared": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-appcenter-analytics": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-appcenter-crashes": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-appcenter-push": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-hot-code-push-plugin.chcp",
+      "file": "plugins/cordova-hot-code-push-plugin/www/chcp.js",
+      "pluginId": "cordova-hot-code-push-plugin",
+      "clobbers": [
+        "chcp"
+      ]
+    },
+    {
+      "id": "cordova-plugin-appcenter-shared.AppCenter",
+      "file": "plugins/cordova-plugin-appcenter-shared/www/AppCenter.js",
+      "pluginId": "cordova-plugin-appcenter-shared",
+      "clobbers": [
+        "AppCenter"
+      ]
+    },
+    {
+      "id": "cordova-plugin-appcenter-analytics.Analytics",
+      "file": "plugins/cordova-plugin-appcenter-analytics/www/Analytics.js",
+      "pluginId": "cordova-plugin-appcenter-analytics",
+      "clobbers": [
+        "AppCenter.Analytics"
+      ]
+    },
+    {
+      "id": "cordova-plugin-appcenter-crashes.Crashes",
+      "file": "plugins/cordova-plugin-appcenter-crashes/www/Crashes.js",
+      "pluginId": "cordova-plugin-appcenter-crashes",
+      "clobbers": [
+        "AppCenter.Crashes"
+      ]
+    },
+    {
+      "id": "cordova-plugin-appcenter-push.Push",
+      "file": "plugins/cordova-plugin-appcenter-push/www/Push.js",
+      "pluginId": "cordova-plugin-appcenter-push",
+      "clobbers": [
+        "AppCenter.Push"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.4",
+    "cordova-hot-code-push-plugin": "1.5.3",
+    "cordova-plugin-appcenter-shared": "0.5.1",
+    "cordova-plugin-appcenter-analytics": "0.5.1",
+    "cordova-plugin-appcenter-crashes": "0.5.1",
+    "cordova-plugin-appcenter-push": "0.5.1"
+  }
+}

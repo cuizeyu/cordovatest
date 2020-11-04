@@ -1,0 +1,7 @@
+{
+  "name": "testdemo",
+  "ios_identifier": "",
+  "android_identifier": "",
+  "update": "resume",
+  "content_url": "http://192.168.10.110:8080/"
+}
